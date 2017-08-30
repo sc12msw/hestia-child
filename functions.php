@@ -108,8 +108,8 @@ if( function_exists('acf_add_local_field_group') ):
               ),
               array (
                 'key' => 'field_59a6dd579ebed',
-                'label' => 'Heading Positon',
-                'name' => 'heading_positon',
+                'label' => 'Heading position',
+                'name' => 'heading_position',
                 'type' => 'radio',
                 'instructions' => 'Select the placement for the heading',
                 'required' => 0,

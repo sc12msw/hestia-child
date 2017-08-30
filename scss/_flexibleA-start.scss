@@ -12,6 +12,8 @@
 
   &__heading{
     font-size: 40px;
+    color: white;
+    font-weight: 900;
 
     &--right{
       margin-left: auto;
@@ -21,6 +23,10 @@
     &--left{
       margin-right: auto;
       padding-left: 50px;
+    }
+    &--center{
+      margin: auto;
+
     }
 
   }
@@ -33,6 +39,7 @@
 
     &__heading{
       font-size: 75px;
+
     }
 
   }
