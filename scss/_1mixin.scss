@@ -1,0 +1,58 @@
+//Mixins
+
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin flexCenter($direction:row){
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transition($type, $time, $pattern) {
+  -webkit-transition:$type $time $pattern;
+  -moz-transition: $type $time $pattern;
+  -ms-transition: $type $time $pattern;
+  transition: $type $time $pattern;
+}
+
+@mixin awesomeIcon ($code,$size,$spacingL,$spacingR){
+  a{
+    &:before{
+      content: $code;
+      font-family: FontAwesome;
+      width: 20px;
+      margin-right: $spacingR;
+      margin-left: $spacingL;
+      font-size: $size;
+    }
+  }
+}
+@mixin parallax($height){
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: $height;
+}
+
+@mixin mainBtn($color,$borderColor,$backgroundColor,$radius){
+  padding:10px 30px;
+  border: 1px solid $borderColor;
+  border-radius:$radius;
+  color: $color;
+  background-color: $backgroundColor;
+}
+
+@mixin coloriseText($color){
+  p,h1,h2,h3,h4,h5,span{
+    color:$color;
+  }
+}

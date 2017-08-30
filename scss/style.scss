@@ -1,0 +1,44 @@
+/*!
+ Theme Name:   Hestia Child
+ Theme URI:    https://aminasound.com
+ Description:  Amina Theme based on the Hestia theme.
+ Author:       Matthew Watson
+ Author URI:   https://aminasound.com
+ Template:     hestia
+ Version:      0.2
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, training
+ Text Domain:  hestia-child
+!*/
+
+
+$accentColor:#0085ba;
+$mainRed:#a40000;
+$blackOp:rgba(0, 0, 0, 0.2);
+$white : #fff;
+$black : #151515;
+$faintGrey:#f5f5f5;
+$lightGrey:#afafaf;
+$midGrey:#777;
+$notQuiteDarkGrey:#9B9B9B;
+$darkGrey:#1B1B1B;
+$lightBlue: #7dc2f6;
+$backgroundGrey:#F4F4F4;
+$navSecondary:#9a9a9a;
+$footerBlue:#00B4FF;
+$footerLink:#FFFFFF;
+$orange:#F77747;
+$yellow:#FFB23D;
+$green:#25A125;
+$teal:#00505b;
+$darkBlue:#3c4a55;
+$redWarning:#fb5959;
+$purple: #6400df;
+
+@import 'https://fonts.googleapis.com/css?family=Gabriela';
+$quoteFont : 'Gabriela', serif;
+
+@import "_1mixin";
+@import "_nav";
+@import "_footer";

@@ -1,0 +1,40 @@
+.flexibleA-start{
+
+  &__container{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  &__heading{
+    font-size: 40px;
+
+    &--right{
+      margin-left: auto;
+      padding-right: 50px;
+    }
+
+    &--left{
+      margin-right: auto;
+      padding-left: 50px;
+    }
+
+  }
+
+}
+
+@media screen and (min-width:768px) {
+
+  .flexibleA-start{
+
+    &__heading{
+      font-size: 75px;
+    }
+
+  }
+
+}
