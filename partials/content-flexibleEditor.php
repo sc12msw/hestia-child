@@ -1,4 +1,10 @@
+<div class="flexibleA-editor"  <?php if (get_sub_field('background_image')){
+  $field = get_sub_field('background_image');
 
-<div class="flexibleA__editor" style="max-width:400px; display:block; margin:auto;">
-  <?php the_sub_field('editor');?>
+  $output = 'style="background-image:url(\''.$field.'\')";';
+  echo $output;
+} ?> >
+  <div class="flexibleA-editor__inner" >
+    <?php the_sub_field('editor');?>
+  </div>
 </div>

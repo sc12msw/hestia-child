@@ -5,7 +5,7 @@ jQuery(document).ready(function($){
         $('.post__article').scrollNav({
            showTopLink: false,
            showHeadline:false,
-           scrollOffset: 200,
+           scrollOffset: 50,
            fixedMargin: 60,
            sectionElem: 'section'
         });

@@ -40,13 +40,15 @@
   }
 
   &.fixed{
+    top: 102px;
+    position: fixed;
   }
 
 }
 .post{
 
   &__article{
-    margin-top: 200px;
+    margin-top: 70px;
   }
 
 }
@@ -59,6 +61,7 @@
     align-items: center;
     height:75px;
     top:100px;
+
     &__list{
       margin-bottom: -2px
     }
@@ -75,8 +78,7 @@
     }
 
     &.fixed{
-      position: fixed;
-      top: 105px;
+
     }
 
   }

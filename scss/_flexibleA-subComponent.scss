@@ -1,0 +1,41 @@
+.flexibleA-subComponent {
+
+  &__quote {
+    display: block;
+    position: relative;
+    margin-top:20px;
+    padding: 10px 35px;
+    border: none;
+
+    &:before {
+      font-size: 30px;
+      content:'';
+      position: absolute;
+      left: 0;
+      top:-10px;
+      width: 35px;
+      height: 35px;
+      background-image: url('../hestia-child/images/open-quote.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    p {
+      font-size: 25px;
+      font-style: italic;
+      font-family: Georgia, serif;
+      line-height: 1.2;
+    }
+
+  }
+
+  &__caption{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: 35px;
+    color:$midGrey;
+
+  }
+}

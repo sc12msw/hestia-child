@@ -31,6 +31,25 @@ function theme_js(){
 
 add_action( 'wp_enqueue_scripts', 'theme_js' );
 
+//Short codes
+function quote_shortcode($atts, $content = null){
+  $a = shortcode_atts( array(
+    'size' => '30',
+  ), $atts );
+
+  return '<blockquote class="flexibleA-subComponent__quote"><p style="font-size:'. esc_attr($a['size']) .'px;">' . $content . '</p></blockquote>';
+}
+add_shortcode('flexible-quote','quote_shortcode');
+//Short codes
+function caption_shortcode($atts, $content = null){
+  $a = shortcode_atts( array(
+    'size' => '15',
+  ), $atts );
+
+  return '<span class="flexibleA-subComponent__caption" style="font-size:'. esc_attr($a['size']) .'px;">' . $content . '</span>';
+}
+add_shortcode('flexible-caption','caption_shortcode');
+
 //ACF for page builder
 if( function_exists('acf_add_local_field_group') ):
 
@@ -77,6 +96,30 @@ if( function_exists('acf_add_local_field_group') ):
                 'media_upload' => 1,
                 'delay' => 0,
               ),
+              array (
+                'key' => 'field_59aeab27f8a67',
+                'label' => 'Background Image',
+                'name' => 'background_image',
+                'type' => 'image',
+                'instructions' => '(Optional) Will make background image for editor to scroll over make sure the image is 1920x1080',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array (
+                  'width' => '',
+                  'class' => '',
+                  'id' => '',
+                ),
+                'return_format' => 'url',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+                'min_width' => '',
+                'min_height' => '',
+                'min_size' => '',
+                'max_width' => '',
+                'max_height' => '',
+                'max_size' => '',
+                'mime_types' => '',
+              ),
             ),
             'min' => '',
             'max' => '',
@@ -108,7 +151,7 @@ if( function_exists('acf_add_local_field_group') ):
               ),
               array (
                 'key' => 'field_59a6dd579ebed',
-                'label' => 'Heading position',
+                'label' => 'Heading Position',
                 'name' => 'heading_position',
                 'type' => 'radio',
                 'instructions' => 'Select the placement for the heading',
@@ -165,6 +208,59 @@ if( function_exists('acf_add_local_field_group') ):
             'label' => 'End Section',
             'display' => 'block',
             'sub_fields' => array (
+            ),
+            'min' => '',
+            'max' => '',
+          ),
+          '59aeba7b3db02' => array (
+            'key' => '59aeba7b3db02',
+            'name' => 'full_page_image',
+            'label' => 'Full Page Image',
+            'display' => 'block',
+            'sub_fields' => array (
+              array (
+                'key' => 'field_59aeba823db03',
+                'label' => 'Background Image',
+                'name' => 'background_image',
+                'type' => 'image',
+                'instructions' => 'Image for the full page image (min 1920x1080)',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array (
+                  'width' => '',
+                  'class' => '',
+                  'id' => '',
+                ),
+                'return_format' => 'url',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+                'min_width' => '',
+                'min_height' => '',
+                'min_size' => '',
+                'max_width' => '',
+                'max_height' => '',
+                'max_size' => '',
+                'mime_types' => '',
+              ),
+              array (
+                'key' => 'field_59aebabb3db04',
+                'label' => 'Caption',
+                'name' => 'caption',
+                'type' => 'text',
+                'instructions' => '(Optional) caption for the image',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array (
+                  'width' => '',
+                  'class' => '',
+                  'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+              ),
             ),
             'min' => '',
             'max' => '',

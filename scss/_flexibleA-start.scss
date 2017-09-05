@@ -15,20 +15,9 @@
     color: white;
     font-weight: 900;
 
-    &--right{
-      margin-left: auto;
-      padding-right: 50px;
-    }
-
-    &--left{
-      margin-right: auto;
-      padding-left: 50px;
-    }
-    &--center{
+    &--right,&--left,&--center{
       margin: auto;
-
     }
-
   }
 
 }
@@ -39,6 +28,22 @@
 
     &__heading{
       font-size: 75px;
+
+      &--right{
+        margin-left: auto;
+        margin-right: 0;
+        padding-right: 50px;
+      }
+
+      &--left{
+        margin-right: auto;
+        margin-left: 0;
+        padding-left: 50px;
+      }
+      &--center{
+        margin: auto;
+
+      }
 
     }
 

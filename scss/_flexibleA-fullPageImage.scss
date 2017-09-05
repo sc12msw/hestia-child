@@ -1,0 +1,24 @@
+.flexibleA-fullPageImage {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 90vh;
+  position: relative;
+  &__caption{
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    &-item{
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}

@@ -23,6 +23,10 @@ while ( have_rows('flexible_article_content') ) : the_row();
 
     get_template_part('partials/content', 'flexibleEditor' );
 
+  elseif( get_row_layout() == 'full_page_image' ):
+
+      get_template_part('partials/content', 'flexibleFullPageImage' );
+
   endif;
 
 endwhile;
