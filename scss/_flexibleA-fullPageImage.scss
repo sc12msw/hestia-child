@@ -5,7 +5,8 @@
   background-size: cover;
   min-height: 90vh;
   position: relative;
-  &__caption{
+
+  &__caption {
     position: absolute;
     bottom: 0;
     height: 50px;
@@ -15,7 +16,8 @@
     padding-left: 50px;
     background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
-    &-item{
+    
+    &-item {
       color: white;
       font-size: 14px;
       font-weight: 600;

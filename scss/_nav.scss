@@ -1,3 +1,11 @@
+.mobile-menu{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  height:40px;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 101;
+}
 .scroll-nav{
   width: 100%;
   background-color: rgba(0,0,0,0.7);
@@ -6,6 +14,7 @@
   align-items: center;
 
   &__list{
+    list-style: none;
   }
 
   &__item{
@@ -40,8 +49,8 @@
   }
 
   &.fixed{
-    top: 102px;
     position: fixed;
+    z-index: 100;
   }
 
 }
@@ -55,12 +64,14 @@
 
 
 @media screen and (min-width:768px){
+  .mobile-menu{
+    display: none;
+  }
 
   .scroll-nav{
     justify-content: flex-end;
     align-items: center;
     height:75px;
-    top:100px;
 
     &__list{
       margin-bottom: -2px

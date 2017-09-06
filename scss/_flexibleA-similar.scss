@@ -1,0 +1,65 @@
+.flexibleA-similar {
+  max-width: 1000px;
+  display: block;
+  margin: auto;
+  padding-bottom: 100px;
+
+  a{
+    text-decoration: none;
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+  }
+
+  &__linkRow{
+    display: flex;
+    margin-bottom: 15px;
+    flex-direction: row;
+    &--red {
+      color: white;
+      background-color: $mainRed;
+    }
+
+    &--default {
+      background-color: white;
+      color: $darkGrey;
+    }
+
+    &--grey {
+      background-color: $notQuiteDarkGrey;
+      color: white;
+    }
+  }
+
+  &__linkCol {
+    flex:1;
+  }
+
+  &__heading {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__linkText {
+    font-size: 14px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    min-height: 130px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .flexibleA-similar {
+
+    &__linkRow{
+      flex-direction: column;
+    }
+
+    &__linkText {
+      font-size: 20px;
+    }
+  }
+}

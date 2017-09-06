@@ -13,6 +13,9 @@
 get_header(); ?>
 <div id="primary" class="content-area-wide">
 	<main id="main" class="site-main flexible">
+		<div class="mobile-menu">
+			<button id="toggleMenu">Open</button>
+		</div>
 		<article class="flexible__wrapper post__article">
 			<?php
 

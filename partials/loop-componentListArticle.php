@@ -27,6 +27,10 @@ while ( have_rows('flexible_article_content') ) : the_row();
 
       get_template_part('partials/content', 'flexibleFullPageImage' );
 
+  elseif( get_row_layout() == 'similar_articles' ):
+
+      get_template_part('partials/content', 'flexibleSimilarArticles' );
+
   endif;
 
 endwhile;
