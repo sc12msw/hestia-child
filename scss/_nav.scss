@@ -1,96 +1,90 @@
-.mobile-menu{
-  width: 100%;
-  position: fixed;
-  left: 0;
-  height:40px;
-  background-color: rgba(0,0,0,0.7);
-  z-index: 101;
-}
-.scroll-nav{
+
+.scroll-nav {
   width: 100%;
   background-color: rgba(0,0,0,0.7);
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 
-  &__list{
+  &__list {
     list-style: none;
+    margin-bottom: 0;
   }
 
-  &__item{
+  &__item {
+    display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
 
-    &.active{
+    &.active {
       border-bottom: 3px solid $mainRed;
 
-      a{
+      a {
         color: white;
 
-        &:focus,&:hover{
+        &:focus,&:hover {
           color:white;
         }
-
       }
-
     }
-
   }
-  &__link{
+  &__link {
     color: $faintGrey;
-    font-size: 18px;
+    font-size: 12px;
     font-weight:600;
     text-align: center;
     text-decoration: none;
 
-    &:hover,&:focus{
+    &:hover,&:focus {
       color: $white;
       text-decoration: none;
     }
-
   }
 
-  &.fixed{
+  &.fixed {
     position: fixed;
     z-index: 100;
   }
-
 }
-.post{
+.post {
 
-  &__article{
+  &__article {
+
     margin-top: 70px;
   }
-
 }
 
 
 @media screen and (min-width:768px){
-  .mobile-menu{
+  .mobile-menu {
     display: none;
   }
 
-  .scroll-nav{
+  .scroll-nav {
     justify-content: flex-end;
     align-items: center;
     height:75px;
 
-    &__list{
+    &__list {
       margin-bottom: -2px
     }
 
-    &__item{
-      display: inline;
+    &__item {
       padding: 25px;
       text-align: center;
 
-      &.active{
+      &.active {
         border-bottom: 3px solid $mainRed;
       }
-
     }
 
-    &.fixed{
-
+    &__link {
+      font-size: 18px;
     }
 
+    &.fixed {
+
+    }
   }
 }
