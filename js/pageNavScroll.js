@@ -4,8 +4,9 @@ jQuery(document).ready(function($){
         //Initialises scroll-nav
         $('.post__article').scrollNav({
            showTopLink: false,
-           showHeadline:false,
-           scrollOffset: 50,
+           showHeadline:true,
+           headlineText:'Training',
+           scrollOffset: 0,
            fixedMargin: 60,
            sectionElem: 'section'
         });
@@ -14,4 +15,19 @@ jQuery(document).ready(function($){
       $(window).on('beforeunload', function() {
         $(window).scrollTop(0);
       });
+
+      $('.scroll-nav__heading').on('click',function(){
+        window.location.href = "https://training.aminasound.com"
+      });
+
+      if ($('#wpadminbar')[0]){
+        if($(window).width()>767){
+          $('.scroll-nav').css("top", "32px");
+        }else{
+          $('.scroll-nav').css("top", "46px");
+        }
+
+      }
+
+      $('<input type="checkbox" id="scroll-nav__mobicon" /><label id="scroll-nav__mobicon-label" for="scroll-nav__mobicon">').insertBefore('.scroll-nav__wrapper');
   });
